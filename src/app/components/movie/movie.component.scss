@@ -1,0 +1,64 @@
+.moviecontainer{
+     height: 100vh;
+     position: relative;
+     display: flex;
+     justify-content: center;
+     align-items: center;
+
+     .moviebackdrop{
+        position:absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background-size: cover;
+        background-position: center;
+        filter: blur(8px);
+        z-index: -1;
+     }
+     .moviecontent{
+         max-width: 80%;
+         padding: 40px;
+         background-color: rgba(0,0,0,.7);
+         border-radius: 10px;
+         display: flex;
+         gap: 40px;
+     }
+     .movieposter img{
+         width:250px;
+         border-radius: 5px;
+     }
+
+     .movieinfo{
+         h1{
+            font-size: 36px;
+            margin-bottom: 10px;
+         }
+         .movietagline{
+            font-style: italic;
+        
+        }
+        .movieoverview{
+             font-size: 16px;
+             line-height: 1.5;
+             margin: 15px 0;
+        }
+        .movievoteaverage,.moviereleasedate{
+             font-weight: bold;
+             margin-bottom: 15px;
+        }
+        .moviebutton{
+             display: flex;
+             gap:14px;
+        }
+        .watchnow{
+             background-color: red;
+             font-size: 18px;
+             
+             &:hover{
+                 background-color: darkred;
+             }
+        }
+     }
+
+}

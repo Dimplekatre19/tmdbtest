@@ -1,0 +1,42 @@
+
+<div class="moviedashboard">
+<table mat-table [dataSource]="dataSource"  class="mat-elevation-z8 w-100">
+    <!-- Poster Column -->
+  <ng-container matColumnDef="poster">
+    <th mat-header-cell *matHeaderCellDef> Poster </th>
+    <td mat-cell *matCellDef="let element">
+        <img  class="movieposter"
+        src="https://image.tmdb.org/t/p/w92/{{element.poster_path}}"
+        [alt]="element.title" [title]="element.title">
+    </td>
+  </ng-container>
+
+    <!-- title Column -->
+    <ng-container matColumnDef="title">
+        <th mat-header-cell *matHeaderCellDef> Title </th>
+        <td mat-cell *matCellDef="let element"> {{element.title}} </td>
+      </ng-container>
+
+        <!-- release_date Column -->
+  <ng-container matColumnDef="release_date">
+    <th mat-header-cell *matHeaderCellDef> Release_date</th>
+    <td mat-cell *matCellDef="let element"> {{element.release_date}} </td>
+  </ng-container>
+
+    <!-- vote_average Column -->
+    <ng-container matColumnDef="vote_average">
+        <th mat-header-cell *matHeaderCellDef> Vote_average</th>
+        <td mat-cell *matCellDef="let element"> {{element.vote_average}} </td>
+      </ng-container>
+
+      <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
+      <tr (click)="navigatesinglemov(row)" mat-row *matRowDef="let row; columns: displayedColumns"></tr>
+</table>
+
+<mat-paginator [length]="totalmovie"
+              [pageSize]="20"
+              [pageSizeOptions]="[10, 20, 50]"
+              (page)="onpagechange($event)"
+              >
+</mat-paginator>
+</div>

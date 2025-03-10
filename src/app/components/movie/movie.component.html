@@ -1,0 +1,36 @@
+<div class="moviecontainer" *ngIf="movieobj">
+   <div class="moviebackdrop" [style.backgroundImage]="'url(https://image.tmdb.org/t/p/original' + movieobj.backdrop_path + ')'">
+
+   </div>
+  <!--moviecard-->
+
+   <div class="moviecontent text-white">
+     <div class="movieposter">
+        <img  class="movieposter"
+        [src]="'https://image.tmdb.org/t/p/w500/' + movieobj.poster_path "
+        [alt]="movieobj.title" [title]="movieobj.title">
+     </div>
+     <div class="movieinfo">
+        <h1>{{movieobj.title}}</h1>
+        <p class="movietagline">
+            {{movieobj.tagline}}
+        </p>
+        <p class="movieoverview">
+            {{movieobj.overview}}
+        </p>
+        <p class="movievoteaverage">
+            ⭐{{movieobj.vote_average}}
+        </p>
+        <p class="moviereleasedate">
+            📅 {{movieobj.release_date}}
+        </p>
+        <div class="moviebutton">
+        <button mat-raised-button class="watchnow">▶ Watch Now</button>
+        <button mat-stroked-button class="back" color="warn" routerLink="/"> ⬅ Back</button>
+        </div>
+     </div>
+   </div>
+
+</div>
+
+

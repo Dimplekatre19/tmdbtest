@@ -1,0 +1,37 @@
+.moviedashboard{
+     max-width: 90%;
+     margin: 0 auto;
+     background-color: #141414;
+     color: white;
+     text-align: center;
+}
+table{
+     background-color: #1e1e1e;
+     color: white;
+
+}
+th{
+    background-color: #1e1e1e;
+    color: white;
+    font-size: 19px;
+}
+td{
+    color: white; 
+}
+
+tr:hover{
+     background-color: #141414;
+     cursor: pointer;
+}
+
+.movieposter{
+     border-radius: 5px;
+}
+
+.mat-paginator{
+    background-color: #1e1e1e !important;
+    color: white !important;
+}
+::ng-deep .mat-select-value{
+    color: white !important;
+}
